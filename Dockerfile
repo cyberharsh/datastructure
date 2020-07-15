@@ -93,4 +93,4 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
 WORKDIR $HOME
 ADD Data_Structures.ipynb /home/jovyan/work/
 
-CMD ["jupyter", "notebook", "--no-browser","--NotebookApp.token=''","--NotebookApp.password=''"]
+CMD ["jupyter", "notebook", "--no-browser","--NotebookApp.token=''","--NotebookApp.password=''","--allow-root"]
