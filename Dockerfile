@@ -91,4 +91,6 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     fix-permissions "${JULIA_PKGDIR}" "${CONDA_DIR}/share/jupyter"
 
 WORKDIR $HOME
-ADD Data_Structures.ipynb /home/
+ADD Data_Structures.ipynb /home/jovyan/work/
+
+CMD ["jupyter", "notebook", "--no-browser","--NotebookApp.token=''","--NotebookApp.password=''"]
